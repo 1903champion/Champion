@@ -1,0 +1,11 @@
+npm vue router 		vue路由
+ 
+npm install vuex --save      vuex管理工具
+
+npm install vue-awesome-swiper --save   轮播插件
+
+npm install --save axios vue-axios    获取服务器数据
+
+npm install vue2-better-scroll -S    下拉刷新和上拉更新
+
+npm i element-ui -S   饿了吗UI
