@@ -39,7 +39,7 @@ const store = new Vuex.Store({
             state.cityHead=!state.cityHead
             router.push({path:'/morecity',query:{id:i}})
 
-        addindexPreferential(state,res){
+         }, addindexPreferential(state,res){
             state.Preferential=res
         },
         addindexcnxh(state,res){
@@ -55,20 +55,19 @@ const store = new Vuex.Store({
             .then(res=>{  
                 // console.log(res.data.data.moduleInfoList[0].config) 
                 store.commit("addindexheader",res.data.data.moduleInfoList[0].config)
-            })           
+            })    
+            axios.get("https://www.easy-mock.com/mock/5d4041a0d3d96f3926d5d9f2/example/model")
+            .then(res=>{
+                console.log(res.data.data.moduleInfoList[3].moduleData.data.guessYouVoList)
+                store.commit("addindexPreferential",res.data.data.moduleInfoList[1].moduleData.data.preferenceValueHuiVos)
+                store.commit("addindexcnxh",res.data.data.moduleInfoList[3].moduleData.data.guessYouVoList)
+            })       
         },
         // 获取城市列表addr的数据
         getDatacity(store){
             axios.get('https://www.easy-mock.com/mock/5d4041a0d3d96f3926d5d9f2/example/https:/www.easy-mock.com/project/5d4041a0d3d96f3926d5d9f2#!method=get')
             .then(res=>{
                 store.commit("getCity",res.data.appState)
-            })
-
-            axios.get("https://www.easy-mock.com/mock/5d4041a0d3d96f3926d5d9f2/example/model")
-            .then(res=>{
-                console.log(res.data.data.moduleInfoList[3].moduleData.data.guessYouVoList)
-                store.commit("addindexPreferential",res.data.data.moduleInfoList[1].moduleData.data.preferenceValueHuiVos)
-                store.commit("addindexcnxh",res.data.data.moduleInfoList[3].moduleData.data.guessYouVoList)
             })
             
 
