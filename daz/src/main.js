@@ -10,11 +10,13 @@ Vue.use(VueAxios, axios)
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 Vue.use(VueAwesomeSwiper, /* { default global options } */)
+
+
 // 引入全局的store
 import store from './store'
 
-import router from './router';
 
+import router from './router';
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
@@ -23,7 +25,6 @@ import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(ElementUI)
 
 new Vue({
-  store,
-  router,
+  store,router,
   render: h => h(App),
 }).$mount('#app')
