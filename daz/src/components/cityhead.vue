@@ -1,6 +1,6 @@
 <template>
     <div class='addr'>
-        <div class='header' v-if='cityHead'>
+        <div class='header'>
             <router-link to='/index' class="iconfont icon-xiaoyu back"></router-link>
             <div class='contry'>
                 <router-link to='/china'>国内</router-link>
@@ -13,22 +13,9 @@
         </div>
         <div class='posi'>
             无法获取您的定位
-        </div>
-        <router-view></router-view>
-    </div>
-     
+        </div>       
+    </div>    
 </template>
-
-<script>
-import {mapState,mapActions,mapMutations} from 'vuex'
-
-export default {
-     computed:{
-        ...mapState(['cityHead'])
-    },
-}
-</script>
-
 
 <style scoped>
 *{

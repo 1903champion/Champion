@@ -2,6 +2,9 @@ import Vue from 'vue'
 import App from './App.vue'
 Vue.config.productionTip = false
 
+import axios from 'axios'
+import VueAxios from 'vue-axios' 
+Vue.use(VueAxios, axios)
 
 // 引入全局的swiper
 import VueAwesomeSwiper from 'vue-awesome-swiper'
@@ -12,13 +15,14 @@ Vue.use(VueAwesomeSwiper, /* { default global options } */)
 // 引入全局的store
 import store from './store'
 
-// 引入全局router
-import router from "./router"
-import VueRouter from 'vue-router'
-//VueRouter明确使用VueRouter
-Vue.use(VueRouter)
 
+import router from './router';
+import VueRouter from 'vue-router';
+Vue.use(VueRouter);
 
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css'
+Vue.use(ElementUI)
 
 new Vue({
   store,router,

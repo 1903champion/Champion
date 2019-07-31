@@ -1,4 +1,5 @@
 <template >
+
   <div>
     <div class="index">
       <div class="header">
@@ -49,6 +50,7 @@
             <div class="like-pic">
                 <img :src=c.defaultPic alt="">
                 <div>{{c.pictag.tag}}</div>
+
             </div>
             <div class="like-center">
                 <h2>{{c.shopName}}</h2>
@@ -72,8 +74,9 @@
 import { mapState, mapActions } from "vuex";
 import swiper from "../components/swiper";
 export default {
+
   computed: {
-    ...mapState(["indexheader","Preferential","cnxh"])
+    ...mapState(["indexheader","Preferential","cnxh",'choosed']])
   },
   methods: {
     ...mapActions(["getindexheader"])
@@ -86,6 +89,7 @@ export default {
     swiper
   }
 };
+
 </script>
 <style scoped>
 @import url("http://at.alicdn.com/t/font_1324710_dyk1f9ynwa.css");

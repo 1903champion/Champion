@@ -1,10 +1,9 @@
 <template>
-    <div class='addr'>
-        <div class='header' v-if='cityHead'>
-            <router-link to='/index' class="iconfont icon-xiaoyu back"></router-link>
+     <div class='addr'>
+        <div class='header'>
+            <router-link to='/china' class="iconfont icon-xiaoyu back"></router-link>
             <div class='contry'>
-                <router-link to='/china'>国内</router-link>
-                <router-link to='/inter'>国际/港澳台</router-link>
+               切换城市
             </div>           
         </div>
         <div class='inp'>
@@ -14,23 +13,22 @@
         <div class='posi'>
             无法获取您的定位
         </div>
-        <router-view></router-view>
+       
     </div>
-     
 </template>
-
 <script>
 import {mapState,mapActions,mapMutations} from 'vuex'
 
 export default {
-     computed:{
-        ...mapState(['cityHead'])
-    },
+   
+    mounted(){
+        
+    }
 }
 </script>
 
-
 <style scoped>
+
 *{
     margin:0;
     padding:0;
@@ -72,16 +70,8 @@ a{
     display:flex;
     justify-content: space-between
 }
-.addr .header .contry>a{
-    color:#f63;
-    display:block;
-    width:50%;
-    text-align: center;
-}
-.addr .header .contry>a.router-link-exact-active{
-    background:#f63;
-    color:#fff;
-}
+
+
 .addr .inp{
     padding:.24rem /* 9/37.5 */.746667rem /* 28/37.5 */;
 }

@@ -1,7 +1,9 @@
 <template>
   <div id="app">
+
      <router-view></router-view>
  
+
   </div>
 </template>
 
@@ -10,10 +12,12 @@
 import "./assets/js/flexble"
 
 
+
+
 export default {
   name: 'app',
   components: {
-    
+
   }
 }
 </script>
