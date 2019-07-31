@@ -1,10 +1,16 @@
-module.exports={
-    devServer: {
-        proxy: {
-            '/ajax': {
-                target: 'http://m.maoyan.com',
-                changeOrigin: true
-            }
-        }
+
+module.exports = {
+    devServer:{
+        proxy:{          
+            
+            // 解决跨域问题
+            '/ajax':{
+                target:"https://m.dianping.com/",
+                changeOrigin:true    
+            }, 
+          
+        },
+
     }
-} ;
+}
+

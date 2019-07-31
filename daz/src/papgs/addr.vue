@@ -1,14 +1,14 @@
 <template>
     <div class='addr'>
-        <div class='header'>
-            <span class="iconfont icon-xiaoyu back"></span>
+        <div class='header' v-if='cityHead'>
+            <router-link to='/index' class="iconfont icon-xiaoyu back"></router-link>
             <div class='contry'>
                 <router-link to='/china'>国内</router-link>
                 <router-link to='/inter'>国际/港澳台</router-link>
             </div>           
         </div>
         <div class='inp'>
-            <span class="iconfont icon-fangdajin search"></span>
+            <span class="iconfont icon-fangdajing-copy search"></span>
             <input type="text" placeholder="输入城市名或拼音查询">
         </div>
         <div class='posi'>
@@ -19,6 +19,15 @@
      
 </template>
 
+<script>
+import {mapState,mapActions,mapMutations} from 'vuex'
+
+export default {
+     computed:{
+        ...mapState(['cityHead'])
+    },
+}
+</script>
 
 
 <style scoped>
@@ -94,8 +103,6 @@ a{
     position:absolute;
     top:37%;
     left:28%;
-    color:green;
-    background:red;
     height:.32rem /* 12/37.5 */;
     width:.32rem /* 12/37.5 */;
 }

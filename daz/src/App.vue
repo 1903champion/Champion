@@ -1,31 +1,31 @@
 <template>
   <div id="app">
-    <Addr/>
-
+      <!-- <index/> -->
+      <addr/>
+      <!-- <china/> -->
   </div>
 </template>
 
 <script>
-import Addr from './pages/addr.vue'
-import './assets/js/flexble'
+// import HelloWorld from './components/HelloWorld.vue'
+import "./assets/js/flexble"
+// import index from "./papgs/index"
+import addr from "./papgs/addr"
+// import china from "./components/china"
 
 export default {
   name: 'app',
   components: {
-    Addr
+    addr,
+    // china
   }
 }
 </script>
 
 <style>
-@import url("http://at.alicdn.com/t/font_1324710_w0j2yjrkrlk.css");
 *{
-  margin:0;
+  margin  :0;
   padding:0;
 }
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+
 </style>
