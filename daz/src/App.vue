@@ -1,28 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Addr/>
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Addr from './pages/addr.vue'
+import './assets/js/flexble'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Addr
   }
 }
 </script>
 
 <style>
+@import url("http://at.alicdn.com/t/font_1324710_w0j2yjrkrlk.css");
+*{
+  margin:0;
+  padding:0;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
