@@ -1,28 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <Login></Login>
+    <router-view></router-view>
+    <!-- <Region/> -->
+
   </div>
 </template>
 
 <script>
-import Login from './components/Login.vue'
 
-export default {
-  name: 'app',
-  components: {
-    Login
+import "./assets/js/flexble";
+// import Region from "./components/Region"
+  export default {
+    name: 'app',
+    components: {
+      // Region
+    }
   }
-}
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import url("http://at.alicdn.com/t/font_1324710_w0j2yjrkrlk.css");
+body,h1,h2,h3,p,ul{margin: 0;padding: 0;}
+li{list-style: none;}
+a{text-decoration: none;}
 </style>
