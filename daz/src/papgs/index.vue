@@ -3,8 +3,8 @@
   <div>
     <div class="index">
       <div class="header">
-        <h1>
-          重庆
+        <h1 @click="btn">
+          {{choosed}}
           <span class="iconfont icon-jiantou8"></span>
         </h1>
         <div class="header-input">
@@ -76,10 +76,14 @@ import swiper from "../components/swiper";
 export default {
 
   computed: {
-    ...mapState(["indexheader","Preferential","cnxh",'choosed']])
+    ...mapState(["indexheader","Preferential","cnxh",'choosed'])
   },
   methods: {
-    ...mapActions(["getindexheader"])
+    ...mapActions(["getindexheader"]),
+    btn(){
+        this.$router.push("/china")
+        // console.log(1)
+    }
   },
   mounted() {
     this.getindexheader();
