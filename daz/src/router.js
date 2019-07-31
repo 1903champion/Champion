@@ -7,7 +7,6 @@ import inter from './components/inter'
 
 
 
-
 const router=new VueRouter({
     routes:[
         {path:'/',redirect:{name:'china'} },
