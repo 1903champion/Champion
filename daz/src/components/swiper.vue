@@ -1,6 +1,7 @@
 <template>
     <div>
         <swiper :options="swiperOption" ref="mySwiper" >
+
             <!--轮播页面 -->
             <swiper-slide>I'm Slide 1</swiper-slide>
             <swiper-slide>I'm Slide 2</swiper-slide>
@@ -18,9 +19,11 @@
         swiperOption: {
           // some swiper options/callbacks
           // 所有的参数同 swiper 官方 api 参数
+
            pagination: {
               el: '.swiper-pagination',
             },
+
         }
       }
     },
@@ -38,6 +41,7 @@
         }
     },
   }
+
 </script>
 
 <style scoped>
@@ -51,3 +55,6 @@
       background: #fff;
 }
 </style>
+
+
+
