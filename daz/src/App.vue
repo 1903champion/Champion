@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-      <index/>
+     <router-view></router-view>
+ 
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+
 import "./assets/js/flexble"
-import index from "./papgs/index"
+
+
 export default {
   name: 'app',
   components: {
-    index
+    
   }
 }
 </script>
@@ -21,5 +23,8 @@ export default {
   margin  :0;
   padding:0;
 }
-
+body{
+  font-family: Hiragino Sans GB, Arial,Helvetica, "宋体", sans-serif;
+    font-size: 14px;
+}
 </style>
