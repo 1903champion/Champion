@@ -12,95 +12,18 @@
                         <span>中国</span><span>+86</span>
                     </li>
                 </ul>
-                <ul>
-                    <p class="d_jump">A</p>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
+                <ul v-for="v,i in city" :key="i">
+                    <p class="d_jump">{{v.firstChar}}</p>
+                    <li v-for="item,j in v.list" @click="cityId(item.cityId)">
+                        <span>{{item.cityName}}</span>  <span>{{item.cityId}}</span>
+                    </li>
                 </ul>
-                <ul>
-                    <p class="d_jump">B</p>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                </ul>
-                <ul>
-                    <p class="d_jump">C</p>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                    <li><span>中国</span><span>+86</span></li>
-                </ul>
+               
             </div>
         </div>
         <ul>
-            <li class="" v-for="v,i in wolds">
-                <a @click="wold(i,$event)" ref="aaa">{{v}}</a>
+            <li class="" v-for="v,i in city">
+                <a @click="wold(i+1,$event)" ref="aaa">{{v.firstChar}}</a>
             </li>
         </ul>
     </div>
@@ -110,35 +33,39 @@ import axios from "axios"
 export default {
     data(){
         return{
-            wolds:["热","A","B","C","D","E","F","G","H","J","K","L","M","N","P","R","T","W","X","Y","Z"]
-        }
+            city:[],
+       
+       }
     },
     methods:{
         wold(index,e){
-             //i:是下标
+             //index:是下标
              //e:是事件$event来的
             // console.log(e.path[1].children)//这里的ref可以获取到元素
-            for(var j=0;j<this.wolds.length;j++){
+            for(var j=0;j<this.city.length;j++){
                 this.$refs.aaa[j].style.background="#fff";
-                 this.$refs.aaa[j].style.color="#446889";
+                this.$refs.aaa[j].style.color="#446889";
             }
             e.target.style.background="#446889";
             e.target.style.color="#fff";
-
-                  let jump = document.querySelectorAll('.d_jump')
-                // 获取需要滚动的距离
-                
-                    let total = jump[index].offsetTop+50;
-                    document.documentElement.scrollTop = total
+            let jump = document.querySelectorAll('.d_jump')
+            let total = jump[index].offsetTop+50;
+            document.documentElement.scrollTop = total;
         },
         goback(){
             this.$router.go(-1)
+        },
+        cityId(id){
+            this.$router.push("/login?id="+id)
         }
 
     },
     mounted(){
-         axios.post("/api/module")
+         axios.get("https://www.easy-mock.com/mock/5d4041a0d3d96f3926d5d9f2/example/guoji")
             .then(res =>{
+                this.city=res.data.appState.list.data.cityData;
+                console.log(this.city)
+
             })
     }
 }

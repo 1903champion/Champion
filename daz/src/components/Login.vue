@@ -5,21 +5,24 @@
         </header>
         <div class="yanzhen">
             <div class="inp">
-                    <div @click="number"> <span>86</span><span class="iconfont icon-jiantou8"></span></div>
+                    <div @click="number"> <span>{{numId}}</span><span class="iconfont icon-jiantou8"></span></div>
                     <div>
-                        <input type="text" placeholder="请输入手机号">
-                        <p>发送验证码</p>
+                        <input type="number" v-model="inputNumber" 
+                        oninput="if(value.length>11)value=value.slice(0,11)"
+                         placeholder="请输入手机号"/>
+                       
+                        <p @click="send" :class="[sendColor? 'red' :'']">{{sendSmg}}</p>
                     </div>
             </div>
             <div class="inp">
                     <div> 验证码</div>
                     <div>
-                        <input type="text" placeholder="请输入验证码">
+                        <input type="text" placeholder="请输入验证码"/>
                     </div>
             </div>
         </div>
         <p>未注册的手机号码验证后自动创建点评账户</p>
-        <div class="login">登录</div>
+        <div class="login" @click="login">登录</div>
         <div><span @click="phonelogin">账号密码登录</span></div>
         <div>
             <div class="line"></div>
@@ -40,18 +43,64 @@
 <script>
 
 export default {
+    data(){
+        return{
+            inputNumber:'',//输入的内容
+            sendSmg:"发送验证码",
+            sendnum:6,//倒计时数字
+            sendColor:false,//颜色
+            numId:86
+        }
+    },
+    mounted(){
+        this.numId=this.$route.query.id
+    },
+    computed:{
+       
+    },
     methods:{
         phonelogin(){
             this.$router.push("/phoneLogin")
         },
         number(){
             this.$router.push("/region")
+        },
+        //发送验证码
+        send(){
+                var phone=this.inputNumber          
+                if(/^1[3456789]\d{9}$/.test(phone) && this.sendColor==false) {                       
+                    this.sendColor=true;
+                    var timer=setInterval(() => {
+                        this.sendnum--;
+                        this.sendSmg=`重新发送(${this.sendnum})`
+                            if(this.sendnum==-1){
+                                this.sendnum=6;
+                                this.sendSmg="发送验证码"
+                                clearInterval(timer)
+                                this.sendColor=false;
+                            }
+                            
+                        }, 1000);
+                }else{
+                    if( this.sendColor==false){
+                        alert("手机号不符合要求")
+                    }
+                }  
+        },
+        login(){
+            
         }
+    },
+    watch:{
+       
     }
 }
 </script>
 
 <style scoped>
+.red{
+    color: #999;
+}
 .icon-jiantou8{
     font-size: .32rem /* 12/37.5 */;
         margin-left: 4px;
