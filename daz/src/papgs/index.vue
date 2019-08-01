@@ -4,7 +4,7 @@
     <div class="index">
       <div class="header">
         <h1 @click="btn">
-          {{choosed}}
+          {{choosed? choosed:"重庆"}}
           <span class="iconfont icon-jiantou8"></span>
         </h1>
         <div class="header-input">
@@ -62,17 +62,19 @@
                 </div>
             </div>
           </div>
+      <div class="seemore">
+        <h1>查看更多</h1>
+      </div>
       </div>
       <!-- 尾部 -->
-      <div class="footer">
-          
-      </div>
+      <footers/>
     </div>
   </div>
 </template>
 <script>
 import { mapState, mapActions } from "vuex";
 import swiper from "../components/swiper";
+import footers from '../components/footers'
 export default {
 
   computed: {
@@ -90,7 +92,7 @@ export default {
     
   },
   components: {
-    swiper
+    swiper,footers
   }
 };
 
@@ -103,11 +105,11 @@ export default {
 .header {
   position: fixed;
   width: 100%;
-  height: 50px;
-  line-height: 50px;
+  height: 1.333333rem /* 50/37.5 */;
+  line-height: 1.333333rem /* 50/37.5 */;
   background-color: #f63;
   color: #fff;
-  padding: 0 10px;
+  padding: 0 .266667rem /* 10/37.5 */;
   text-align: center;
   display: -webkit-box;
   z-index: 305;
@@ -116,7 +118,7 @@ export default {
 }
 .header h1 {
   position: relative;
-  padding-right: 17px;
+  padding-right: .453333rem /* 17/37.5 */;
   font-size: 0.373333rem /* 14/37.5 */;
   color: #fff;
   max-width: 60px;
@@ -130,11 +132,11 @@ export default {
   padding: 0 0 0 0.8rem /* 30/37.5 */;
   -webkit-box-flex: 1;
   height: 30px;
-  margin: 9px 6px 9px 10px;
+  margin: .24rem /* 9/37.5 */ .16rem /* 6/37.5 */ .24rem /* 9/37.5 */ .266667rem /* 10/37.5 */;
   line-height: 32px;
   color: #b8b8b8;
   text-align: left;
-  font-size: 13px;
+  font-size: .346667rem /* 13/37.5 */;
   transition: left 0.2s, right 0.2s;
   -webkit-border-radius: 25px;
   border-radius: 25px;
@@ -145,30 +147,30 @@ export default {
 }
 .header > span {
   display: block;
-  width: 28px;
+  width: .746667rem /* 28/37.5 */;
   height: 100%;
   font-size: 0.64rem; /* 24/37.5 */
 }
 .content {
   background: url("../assets/img/bgt.jpg") no-repeat 0 0;
-  height: 120px;
+  height: 3.2rem /* 120/37.5 */;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
-  margin-top: 50px;
+  margin-top: 1.333333rem /* 50/37.5 */;
   overflow: hidden;
 }
 .content-title {
   display: flex;
   justify-content: center;
-  margin: 24px 0 14px;
+  margin: .64rem /* 24/37.5 */ 0 .373333rem /* 14/37.5 */;
 
   height: 30px;
 }
 .content-title span {
-  height: 30px;
-  width: 30px;
-  margin-right: 8px;
+  height: .8rem /* 30/37.5 */;
+  width: .8rem /* 30/37.5 */;
+  margin-right: .213333rem /* 8/37.5 */;
   font-size: 0.8rem /* 30/37.5 */;
   background: #fff;
   color: #f63;
@@ -351,6 +353,20 @@ export default {
     color: #777;
     line-height: .64rem /* 24/37.5 */;
 }
-    
+.seemore{
+  /* display: none; */
+  border-top:1px solid #f5f5f5;
+  text-align: center;
+  background-color: #fff;
+  margin: 0;
+  
+}
+.seemore h1{
+  color: #333;
+  font-size: .4rem /* 15/37.5 */;
+   line-height: 1.2rem /* 45/37.5 */;
+  margin: 0 auto;
+   height: 1.2rem /* 45/37.5 */;
+}
  
 </style>
