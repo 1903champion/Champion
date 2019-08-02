@@ -58,7 +58,7 @@ const store = new Vuex.Store({
             })    
             axios.get("https://www.easy-mock.com/mock/5d4041a0d3d96f3926d5d9f2/example/model")
             .then(res=>{
-                console.log(res.data.data.moduleInfoList[3].moduleData.data.guessYouVoList)
+                // console.log(res.data.data.moduleInfoList[3].moduleData.data.guessYouVoList)
                 store.commit("addindexPreferential",res.data.data.moduleInfoList[1].moduleData.data.preferenceValueHuiVos)
                 store.commit("addindexcnxh",res.data.data.moduleInfoList[3].moduleData.data.guessYouVoList)
             })       
@@ -69,8 +69,6 @@ const store = new Vuex.Store({
             .then(res=>{
                 store.commit("getCity",res.data.appState)
             })
-            
-
         }
     },
     getters:{}
