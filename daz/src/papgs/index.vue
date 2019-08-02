@@ -7,7 +7,7 @@
           {{choosed? choosed:"重庆"}}
           <span class="iconfont icon-jiantou8"></span>
         </h1>
-        <div class="header-input">
+        <div class="header-input" @click="search">
           <span class="iconfont icon-fangdajing-copy">输入商户名、地点</span>
         </div>
         <span class="iconfont icon-04"></span>
@@ -84,7 +84,9 @@ export default {
     ...mapActions(["getindexheader"]),
     btn(){
         this.$router.push("/china")
-        // console.log(1)
+    },
+    search(){
+      this.$router.push("/search")
     }
   },
   mounted() {

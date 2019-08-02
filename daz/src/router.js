@@ -18,7 +18,9 @@ import liren from "./components/swiper/liren.vue"
 import gouwu from "./components/swiper/gouwu.vue"
 import zhoubianyou from "./components/swiper/zhoubianyou.vue"
 import ktv from "./components/swiper/ktv.vue"
-
+import search from "./components/search"
+import date from "./components/swiper/jiudian/date.vue"
+import sousuo from "./components/swiper/jiudian/sousuo.vue"
 
 
 
@@ -29,12 +31,8 @@ const router=new VueRouter({
         {path:"/index",name:"index",component:index},
         {name:'china',path:'/china',component:china},
         {path:'/inter',component:inter},
-
-       
         {path:'/addr',component:addr},
         {path:'/morecity:id',component:morecity},
-
-
         {path:"/meishi",component:meishi},
         {path:"/maoyan",component:maoyan},
         {path:"/jiudian",component:jiudian},
@@ -45,6 +43,10 @@ const router=new VueRouter({
         {path:"/gouwu",component:gouwu},
         {path:"/zhoubianyou",component:zhoubianyou},
         {path:"/ktv",component:ktv},
+        {path:"/search",component:search},
+        {path:"/date",component:date},
+        {path:"/sousuo",component:sousuo},
+
 
        
 ]
