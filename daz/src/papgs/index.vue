@@ -4,7 +4,7 @@
     <div class="index">
       <div class="header">
         <h1 @click="btn">
-          {{choosed}}
+          {{choosed?choosed:'重庆'}}
           <span class="iconfont icon-jiantou8"></span>
         </h1>
         <div class="header-input">

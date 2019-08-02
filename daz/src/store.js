@@ -10,10 +10,12 @@ const store = new Vuex.Store({
         // index头部的数据保存地址
         indexheader:[],
 
-        hotCity:[],//热门城市
-        cityList:[],//城市列表
+        hotCity:[],//国内热门城市
+        cityList:[],//国内城市列表
+        intercityList:[],//国际热门城市
+
         choosed:'',//当前选中的城市
-        cityHead:true,
+       
 
         Preferential:[],
         cnxh:[]
@@ -25,7 +27,7 @@ const store = new Vuex.Store({
             state.indexheader=res
         },
 
-        //获取城市列表并赋值
+        //获取国内城市列表并赋值
         getCity(state,res){            
             state.hotCity=res.hotcity.data.hotCity
             state.cityList=res.list.data.cityData
@@ -36,15 +38,24 @@ const store = new Vuex.Store({
             router.push('index')
         },
         goTomore(state,i){
-            state.cityHead=!state.cityHead
-            router.push({path:'/morecity',query:{id:i}})
 
-         }, addindexPreferential(state,res){
+            router.push({path:'/morecity',query:{c:i}})
+
+         },
+        //获取国际城市列表并赋值
+         getInterCity(state,res){
+            state.intercityList=res.list.data.cityData
+         },
+        addindexPreferential(state,res){
             state.Preferential=res
         },
         addindexcnxh(state,res){
             state.cnxh=res
 
+        },
+        // 城市输入框获取值
+        getDataInput(state,res){
+            state.cityInpArr=res
         }
         
     },
@@ -58,20 +69,35 @@ const store = new Vuex.Store({
             })    
             axios.get("https://www.easy-mock.com/mock/5d4041a0d3d96f3926d5d9f2/example/model")
             .then(res=>{
-                console.log(res.data.data.moduleInfoList[3].moduleData.data.guessYouVoList)
                 store.commit("addindexPreferential",res.data.data.moduleInfoList[1].moduleData.data.preferenceValueHuiVos)
                 store.commit("addindexcnxh",res.data.data.moduleInfoList[3].moduleData.data.guessYouVoList)
             })       
         },
-        // 获取城市列表addr的数据
+        // 获取国内城市列表addr的数据
         getDatacity(store){
-            axios.get('https://www.easy-mock.com/mock/5d4041a0d3d96f3926d5d9f2/example/https:/www.easy-mock.com/project/5d4041a0d3d96f3926d5d9f2#!method=get')
+            axios.get('/citylist?_api=true&msource=seouser')
             .then(res=>{
                 store.commit("getCity",res.data.appState)
             })
-            
+        },
+        getDataIntercity(store){
+            axios.get('/citylist?_api=true&msource=seouser&type=1')
+            .then(res=>{
+                store.commit("getInterCity",res.data.appState)
+            })
+        },
 
-        }
+        // getDataInputcity(store,url){
+        //     console.log(url)
+            
+        //     axios.post(url,e)
+        //     .then(res=>{
+        //         console.log('input:',res)
+
+        //         store.commit("getDataInput",res)
+        //     })
+        // },
+        
     },
     getters:{}
 })

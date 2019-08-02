@@ -18,6 +18,7 @@ import liren from "./components/swiper/liren.vue"
 import gouwu from "./components/swiper/gouwu.vue"
 import zhoubianyou from "./components/swiper/zhoubianyou.vue"
 import ktv from "./components/swiper/ktv.vue"
+import searchcity from "./components/searchcity"
 
 
 
@@ -32,7 +33,8 @@ const router=new VueRouter({
 
        
         {path:'/addr',component:addr},
-        {path:'/morecity:id',component:morecity},
+        {path:'/morecity',component:morecity},
+        {path:'/searchcity',component:searchcity},
 
 
         {path:"/meishi",component:meishi},
