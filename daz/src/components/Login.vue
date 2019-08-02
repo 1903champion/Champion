@@ -1,7 +1,7 @@
 <template>
     <div class="login_inp">
         <header>
-            <span class="iconfont icon-xiaoyu"></span><span>手机号快速登录</span>
+            <span class="iconfont icon-xiaoyu " @click="fh"></span><span>手机号快速登录</span>
         </header>
         <div class="yanzhen">
             <div class="inp">
@@ -65,6 +65,11 @@ export default {
         number(){
             this.$router.push("/region")
         },
+        fh(){
+            this.$router.push("/index")
+           
+        }
+        ,
         //发送验证码
         send(){
                 var phone=this.inputNumber          

@@ -10,7 +10,7 @@
         <div class="header-input" @click="search">
           <span class="iconfont icon-fangdajing-copy">输入商户名、地点</span>
         </div>
-        <span class="iconfont icon-04"></span>
+        <span class="iconfont icon-04" @click="login"></span>
       </div>
       <div class="content">
         <div class="content-title">
@@ -87,6 +87,9 @@ export default {
     },
     search(){
       this.$router.push("/search")
+    },
+    login(){
+      this.$router.push("/login")
     }
   },
   mounted() {
