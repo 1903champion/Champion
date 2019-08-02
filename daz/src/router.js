@@ -1,3 +1,4 @@
+
 import VueRouter from 'vue-router';
 
 import china from './components/china'
@@ -21,7 +22,9 @@ import ktv from "./components/swiper/ktv.vue"
 import search from "./components/search"
 import date from "./components/swiper/jiudian/date.vue"
 import sousuo from "./components/swiper/jiudian/sousuo.vue"
-
+import Login from './components/Login.vue';
+import PhoneLogin from './components/PhoneLogin.vue';
+import Region from './components/Region.vue';
 
 
 
@@ -46,9 +49,19 @@ const router=new VueRouter({
         {path:"/search",component:search},
         {path:"/date",component:date},
         {path:"/sousuo",component:sousuo},
+        // {path:"/",redirect:{ path: '/login' }},
+        {path:"/login",component:Login},
+        {path:"/phoneLogin",component:PhoneLogin},
+        {path:"/region",component:Region},
 
 
        
 ]
 })
+
+
+
+
+
+
 export default router;
