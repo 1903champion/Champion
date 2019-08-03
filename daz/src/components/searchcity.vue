@@ -28,6 +28,7 @@ export default {
             cityInput:'',
             cityInpArr:[],//输入后返回的值
             bool:true,
+            obj:{},
 
         }
     },
@@ -47,6 +48,7 @@ export default {
                 }]
             })
             .then(res=>{
+                console.log(res)
                 this.cityInpArr=res.data.data.moduleInfoList[0].moduleData.data.records
             })
             if(this.cityInput){
@@ -56,7 +58,12 @@ export default {
             }                         
         }
     },
-    mounted(){        
+    mounted(){   
+        
+        
+
+         
+
     },
 
 }

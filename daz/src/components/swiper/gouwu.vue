@@ -61,6 +61,25 @@
                 <P>服装</P>
             </div>
         </div>
+        <div class='items'>
+            <h3>购物头条</h3>
+            <ul class='itemlist'>
+                <li v-for='it in items' :key='it.id'>
+                    <img src="it.picture.url">
+                   <h3> {{it.title}}</h3>
+                    <p>
+                        <img src='it.authorAvatar' />
+                        <span>{{authorName}}</span>                      
+                    </p>
+                    <div>
+                        <img src="../../assets/img/hot.png" >
+                        <span>
+                            {{it.hot}}
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
 
     </div>
 </template>
@@ -68,10 +87,22 @@
 <script>
 import cartHeadSwiper from "./../cartHeadSwiper";
 import cartSwiperClass from "./../cartSwiperClass";
+import axios from 'axios';
 
 export default {
+    data(){
+        return {
+            items:[]
+        }
+    },
     components: {
     cartHeadSwiper,cartSwiperClass
+  },mounted(){
+      axios.get('https://easy-mock.com/mock/5d42dbad17e02d075090e88e/shop')
+      .then(res=>{
+          console.log(res)
+        //   this.items=res.data.msg.items
+      })
   }
 }
 </script>

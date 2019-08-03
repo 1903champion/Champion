@@ -13,7 +13,19 @@
         </div>
         <div class='posi'>
             无法获取您的定位
-        </div>       
+        </div>  
+        <div class='more'>
+            <h3>{{word}}</h3>
+            <ul>
+                <li v-for='m in more' :key='m.cityId' @click='chooseCity(m.cityName)'>
+                    {{m.cityName}}
+                </li>
+               
+            </ul>
+
+        </div>
+
+
     </div>    
       
     </div>
@@ -24,12 +36,17 @@ import axios from 'axios';
 
 
 export default {
+data(){
+    return {
+        more:[],
+        word:'',
+    }
+},
   mounted(){
-        let c = this.$route.query.c;
-        console.log(c)
-      axios.get('ajax/citylist?_api=true&msource=seouser&c='+c)
+        this.word = this.$route.query.c;
+      axios.get('citylist?_api=true&msource=seouser&type=0&c='+this.word)
             .then(res=>{
-               console.log(res)
+             this.more=res.data.appState.list.data.charCityData
      })
   }
 }
@@ -45,6 +62,14 @@ a{
 }
 .addr{
     background:#F2F2F2;
+}
+h3{
+    padding:0 0 0 .266667rem /* 10/37.5 */;
+    line-height:.8rem /* 30/37.5 */;
+    font-size:.373333rem /* 14/37.5 */;
+    color:#323232;
+    background:#F2F2F2;
+
 }
 .addr .header{
     height:1.2rem /* 45/37.5 */;
@@ -106,5 +131,24 @@ a{
     text-align: center;
     font-size:.373333rem /* 14/37.5 */;
 }
+.more ul{
+    background:#fff;
+    list-style:none;
+    overflow: hidden;
+}
+.more ul li{
+    width:33.33%;
+    line-height:1.28rem /* 48/37.5 */;
+    border-bottom:1px solid #f2f2f2;
+    border-left:1px solid #f2f2f2;
+    box-sizing: border-box;
+    text-align: center;
+    color:#323232;
+    font-size:.426667rem /* 16/37.5 */;
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    float:left;
 
+}
 </style>
