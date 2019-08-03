@@ -8,6 +8,10 @@
 <script>
 // 引入手机淘宝js
 import "./assets/js/flexble"
+// 引入jQuery
+
+import "./assets/js/jquery"
+
 export default {
   name: 'app',
   components: {

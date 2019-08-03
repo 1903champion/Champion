@@ -6,7 +6,8 @@ module.exports = {
             // 解决跨域问题
             '/':{
                 target:"https://m.dianping.com/",
-                changeOrigin:true    
+                changeOrigin:true,
+                ws:false   
             }, 
             '/api':{
                 target:'https://m.dianping.com/index',
