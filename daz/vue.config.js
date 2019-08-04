@@ -1,18 +1,30 @@
 
 module.exports = {
     devServer:{
-        proxy:{          
-            
+        proxy:{
             // 解决跨域问题
             '/':{
                 target:"https://m.dianping.com/",
-                changeOrigin:true    
+                changeOrigin:true ,
+                ws:false ,
+                secure: false,  // 如果是https接口，需要配置这个参数
+                changeOrigin: true,  //是否跨域 
+                //  https://m.dianping.com/index/api/...
             }, 
+            // '/api':{
+            //     target:'https://m.dianping.com/index',
+            //     changeOrigin:true,
+            //     ws:false,
+            //     secure: false,  // 如果是https接口，需要配置这个参数
+            //     changeOrigin: true,  //是否跨域
+    // https://m.dianping.com/index/api/...http://shangcheng.bjcshy.com/lvpai/portal
+            // },
             '/api':{
-                target:'https://m.dianping.com/index',
-                changeOrigin:true//代理服务
-                // https://m.dianping.com/index/api/module
-                // https://www.easy-mock.com/mock/5d4041a0d3d96f3926d5d9f2/example/guoji
+                target:'http://shangcheng.bjcshy.com/lvpai/portal',
+                changeOrigin:true,
+                // ws:false,
+                // secure: false,  // 如果是https接口，需要配置这个参数
+                // changeOrigin: true,  //是否跨域
             }
 
         },
