@@ -1,0 +1,93 @@
+/* 头部 */
+.goback{
+    background: #524ea2 !important;
+overflow: hidden;
+width: 100%;
+position: fixed;
+top: 0;
+left: 0;
+}
+.goback h2{
+    text-align: center;
+    line-height: 1.2rem;
+}
+.goback span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.2rem /* 45/37.5 */;
+    line-height: 1.2rem /* 45/37.5 */;
+    text-align: center;
+    width: 1.2rem;
+}
+/* 登录/注册 */
+.title{display: flex;padding-top: 1.2rem /* 45/37.5 */;}
+.title>div{text-align:center;line-height: 1.2rem ;
+    width: 50%;
+background: #524ea2;color: #f5f5f5;font-size: .48rem;
+}
+.title .active{
+    background:#f5f5f5;
+    color: #524ea2;
+}
+/* 注册 */
+.container{
+    padding:10px;
+    background: #f5f5f5;
+}
+.aaa{
+    display: none;
+}
+
+.from>div{
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.from>div>span{
+    display: inline-block;
+    width:30%;
+    height: .853333rem;
+    line-height: .853333rem /* 32/37.5 */;
+    text-align: center;
+    color: #524ea2;
+    font-size: 16px;
+}
+.from>div>input{
+    width:70%;
+    height: .853333rem;
+    line-height: .853333rem /* 32/37.5 */;
+    outline: none;
+    border: 1px solid #999;
+}
+.from>p{
+    text-align: center;
+    margin: 20px 0;
+}
+.from>p>span:nth-of-type(1){
+    color: #409eff;
+}
+.from>p>span:nth-of-type(2){
+    color: #524ea2;
+}
+.from>p>input{
+    vertical-align: middle;
+}
+.from>input{
+    background-color: #524ea2;
+    text-align: center;
+    height: .853333rem /* 32/37.5 */;
+    line-height: .853333rem /* 32/37.5 */;
+    color: #fff;
+    font-size: .426667rem /* 16/37.5 */;
+    width: 100%;
+    border: 0;
+    outline: none;
+}
+.login p{
+    line-height: .933333rem /* 35/37.5 */;
+    margin: 0;
+    text-align: left;
+    color: #524ea2;
+}

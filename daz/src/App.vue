@@ -1,7 +1,7 @@
 <template>
   <div id="app">
+     <!-- <router-view></router-view> -->
      <router-view></router-view>
-
   </div>
 </template>
 
@@ -11,7 +11,6 @@ import "./assets/js/flexble"
 export default {
   name: 'app',
   components: {
-
   }
 }
 </script>
@@ -24,7 +23,6 @@ export default {
 }
 body{
   font-family: Hiragino Sans GB, Arial,Helvetica, "宋体", sans-serif;
-    font-size: 14px;
 }
 li{list-style: none;}
 a{text-decoration: none;}
