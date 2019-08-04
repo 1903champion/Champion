@@ -25,7 +25,7 @@ import sousuo from "./components/swiper/jiudian/sousuo.vue"
 import Login from './components/Login.vue';
 import PhoneLogin from './components/PhoneLogin.vue';
 import Region from './components/Region.vue';
-
+import jdxxq from './components/swiper/jiudian/jdxqy.vue'
 
 
 const router=new VueRouter({
@@ -53,6 +53,7 @@ const router=new VueRouter({
         {path:"/login",component:Login},
         {path:"/phoneLogin",component:PhoneLogin},
         {path:"/region",component:Region},
+        {path:'/jdxqy',component:jdxxq}
 
 
        

@@ -17,6 +17,7 @@ const store = new Vuex.Store({
         Preferential: [],
         cnxh: [],
         wzqy: [], //酒店位置区域的数据
+        jdsj:[],  //酒店数据
 
     },
     mutations: {
@@ -53,20 +54,25 @@ const store = new Vuex.Store({
         },
         addwzqu(state, res) {
             state.wzqy = res
+        },
+        addjdsj(state,res){
+            state.jdsj=res
         }
 
     },
     actions: {
         // 获取到首页的header数据
         getindexheader(store) {
-            axios.get("https://www.easy-mock.com/mock/5d4041a0d3d96f3926d5d9f2/example/#!method=get")
+            // axios.post("/index/api/module")
+            //     .then(res => {
+            //         console.log(res)
+            //         // console.log(res.data.data.moduleInfoList[0].config) 
+            //         store.commit("addindexheader", res.data.data.moduleInfoList[0].config)
+            //     })
+            axios.post("/index/api/module")
                 .then(res => {
-                    // console.log(res.data.data.moduleInfoList[0].config) 
-                    store.commit("addindexheader", res.data.data.moduleInfoList[0].config)
-                })
-            axios.get("https://www.easy-mock.com/mock/5d4041a0d3d96f3926d5d9f2/example/model")
-                .then(res => {
-                    // console.log(res.data.data.moduleInfoList[3].moduleData.data.guessYouVoList)
+                    // console.log(res)
+                    console.log(res.data.data.moduleInfoList[3].moduleData.data.guessYouVoList)
                     store.commit("addindexPreferential", res.data.data.moduleInfoList[1].moduleData.data.preferenceValueHuiVos)
                     store.commit("addindexcnxh", res.data.data.moduleInfoList[3].moduleData.data.guessYouVoList)
                 })
@@ -82,9 +88,17 @@ const store = new Vuex.Store({
         getwzqy(store) {
             axios.get("/otahotel/hotelm/locationInfo?cityid=9")
                 .then(res => {
-                    console.log(res.data.data.locationList)
+                    // console.log(res.data.data.locationList)
                     store.commit("addwzqu", res.data.data.locationList)
                 })
+        },
+        // 获取酒店数据
+        getjdsj(store){
+            axios.get('/otahotel/hotelm/search?cityid=9&locatecityid=&mylng=&mylat=&lng=&lat=&hotelstarids=&pricerange=&sortid=&limitresult=20&limitpageno=0&searchtype=0&groupable=&filterids=&versionName=&utm_medium=touch')
+            .then(res=>{
+                console.log(res.data.data.shopList)
+                store.commit("addjdsj",res.data.data.shopList)
+            })
         }
     },
     getters: {}
