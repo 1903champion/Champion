@@ -63,15 +63,15 @@ const store = new Vuex.Store({
     actions: {
         // 获取到首页的header数据
         getindexheader(store) {
-            // axios.post("/index/api/module")
-            //     .then(res => {
-            //         console.log(res)
-            //         // console.log(res.data.data.moduleInfoList[0].config) 
-            //         store.commit("addindexheader", res.data.data.moduleInfoList[0].config)
-            //     })
-            axios.post("/index/api/module")
+            axios.get("https://www.easy-mock.com/mock/5d4041a0d3d96f3926d5d9f2/example/")
                 .then(res => {
-                    // console.log(res)
+                   
+                    // console.log(res.data.data.moduleInfoList[0].config) 
+                    store.commit("addindexheader", res.data.data.moduleInfoList[0].config)
+                })
+            axios.get("https://www.easy-mock.com/mock/5d4041a0d3d96f3926d5d9f2/example/model")
+                .then(res => {
+                    console.log(res)
                     console.log(res.data.data.moduleInfoList[3].moduleData.data.guessYouVoList)
                     store.commit("addindexPreferential", res.data.data.moduleInfoList[1].moduleData.data.preferenceValueHuiVos)
                     store.commit("addindexcnxh", res.data.data.moduleInfoList[3].moduleData.data.guessYouVoList)

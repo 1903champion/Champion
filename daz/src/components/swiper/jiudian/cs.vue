@@ -237,7 +237,8 @@ body{
     font-size:.373333rem /* 14/37.5 */;
     display: inline-block;
     margin-right: .133333rem /* 5/37.5 */;
-    line-height: 1.133333rem /* 80/37.5 */
+    line-height: 1.133333rem /* 80/37.5 */;
+    background:#fff
 }
 .box{
     padding-left: .3rem;
@@ -448,13 +449,16 @@ body{
     transform: scale(0.8);
     line-height: .426667rem;
     width:.426667rem;
-    text-align: center
+    text-align: center;
+    z-index: -1
 }
 .tc{
     background-color: #ff8400;
     color: #fff;
     transform: scale(0.8);
-    line-height: .426667rem
+    line-height: .426667rem;
+    z-index: -1
+
    
 }
 .lists-right1{
