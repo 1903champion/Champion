@@ -1,0 +1,79 @@
+/* 头部 */
+.goback{
+    background: #524ea2 !important;
+   overflow: hidden;
+   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.goback h2{
+    text-align: center;
+    line-height: 1.2rem;
+}
+.goback span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.2rem /* 45/37.5 */;
+    line-height: 1.2rem /* 45/37.5 */;
+    text-align: center;
+    width: 1.2rem;
+}
+/* city */
+.city{
+   
+    padding: 1.2rem 10px 0;
+}
+
+.city>div>h3{line-height: 36px;}
+.city>div ul{
+    overflow: hidden;
+}
+.city>div ul li{
+    float: left;
+    padding: 8px 12px;
+    font-size: 13px;
+    border: 1px solid #bfcbd9;
+    margin:0 5px 10px;
+}
+.city>div ul .bule{
+    background-color: #524ea2;
+}
+.yangli>img{
+    width: 100%
+}
+/* 图片样例 */
+  .photo { 
+      box-sizing: border-box;
+      padding: 0 10px;
+      -moz-column-count:2; /* Firefox */
+      -webkit-column-count:2; /* Safari 和 Chrome */
+      column-count:2;
+      -moz-column-gap: 2em;
+      -webkit-column-gap: 2em;
+      column-gap: 10px;
+      width: 100%;
+      margin:7px auto;
+  }
+  .photo .item { 
+      margin-bottom: 7px;
+      /* -moz-page-break-inside: avoid; */
+      -webkit-column-break-inside: avoid;
+      break-inside: avoid;
+      color: #bcbcbc;
+  }
+  .photo .item img{
+      width: 100%;
+  }
+  .photo .item h5{
+      font-size: .533333rem /* 20/37.5 */;
+      color: #484848;
+      margin: 7px 0;
+  }
+  .photo .item p{
+      font-size: .426667rem /* 16/37.5 */;
+      margin-bottom: .133333rem /* 5/37.5 */;
+  }
+
+
