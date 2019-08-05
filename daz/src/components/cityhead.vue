@@ -8,8 +8,8 @@
             </div>           
         </div>
         <div class='inp'>
-            <span class="iconfont icon-fangdajing-copy search"></span>
-            <input type="text" placeholder="输入城市名或拼音查询">
+            <span  class="iconfont icon-fangdajing-copy search"></span>
+            <router-link to='/searchcity'><input type="text" placeholder="输入城市名或拼音查询" ></router-link>
         </div>
         <div class='posi'>
             无法获取您的定位

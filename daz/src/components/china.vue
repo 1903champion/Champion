@@ -1,6 +1,6 @@
 <template>
     <div>
-        <!-- <cityhead/> -->
+        <cityhead/>
         <div class='hotcity'>
            <h3>热门城市</h3>
             <ul>
@@ -23,7 +23,7 @@
                 <li v-for='l in t.list' :key='l.cityId' @click='chooseCity(l.cityName)'>
                     {{l.cityName}}
                 </li>
-                <li @click='goTomore(i)'>更多</li>
+                <li @click='goTomore(t.firstChar)'>更多</li>
             </ul>
         </div>
     </div>

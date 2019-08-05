@@ -1,4 +1,6 @@
-<template >
+
+
+
     <div>
         <div class="jd-header">
             <div>
@@ -142,3 +144,4 @@ a{
     margin-right: 2px
 }
 </style>
+

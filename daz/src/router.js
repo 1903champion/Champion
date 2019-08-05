@@ -7,6 +7,7 @@ import inter from './components/inter'
 
 import addr from './papgs/addr'
 import morecity from './papgs/morecity'
+import elongAddr from './components/elongAddr'
 
 import meishi from "./components/swiper/meishi"
 import index from "./papgs/index.vue"
@@ -19,12 +20,17 @@ import liren from "./components/swiper/liren.vue"
 import gouwu from "./components/swiper/gouwu.vue"
 import zhoubianyou from "./components/swiper/zhoubianyou.vue"
 import ktv from "./components/swiper/ktv.vue"
+
+import searchcity from "./components/searchcity"
+import elongName from "./components/elongName"
+
 import search from "./components/search"
 import date from "./components/swiper/jiudian/date.vue"
 import sousuo from "./components/swiper/jiudian/sousuo.vue"
 import Login from './components/Login.vue';
 import PhoneLogin from './components/PhoneLogin.vue';
 import Region from './components/Region.vue';
+
 
 import jdxxq from './components/swiper/jiudian/jdxqy.vue'
 
@@ -43,8 +49,20 @@ const router=new VueRouter({
         {path:"/index",name:"index",component:index},
         {name:'china',path:'/china',component:china},
         {path:'/inter',component:inter},
+
+        {path:'/elongAddr',component:elongAddr},
+        {path:'/elongName',component:elongName},
+
+       
+        {path:'/addr',component:addr},
+        {path:'/morecity',component:morecity},
+        {path:'/searchcity',component:searchcity},
+
+
+
         {path:'/addr',component:addr},
         {path:'/morecity:id',component:morecity},
+
         {path:"/meishi",component:meishi},
         {path:"/maoyan",component:maoyan},
         {path:"/jiudian",component:jiudian},

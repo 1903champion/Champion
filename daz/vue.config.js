@@ -3,6 +3,21 @@ module.exports = {
     devServer:{
         proxy:{
             // 解决跨域问题
+
+            // '/':{
+            //     target:"https://m.dianping.com/",
+            //     changeOrigin:true,
+            //     ws:false,    
+            // }, 
+//             '/':{
+//                 target:"http://m.elong.com/",
+//                 changeOrigin:true,
+//                 ws:false,    
+//             }, 
+           
+            
+          
+
             '/':{
                 target:"https://m.dianping.com",
                 changeOrigin:true,
@@ -30,6 +45,7 @@ module.exports = {
                 // secure: false,  // 如果是https接口，需要配置这个参数
                 // changeOrigin: true,  //是否跨域
             }
+
 
         },
 
