@@ -22,11 +22,11 @@ module.exports = {
                 target:"https://m.dianping.com",
                 changeOrigin:true,
                 ws:false   
-                target:"https://m.dianping.com/",
-                changeOrigin:true ,
-                ws:false ,
-                secure: false,  // 如果是https接口，需要配置这个参数
-                changeOrigin: true,  //是否跨域 
+                // target:"https://m.dianping.com/",
+                // changeOrigin:true ,
+                // ws:false ,
+                // secure: false,  // 如果是https接口，需要配置这个参数
+                // changeOrigin: true,  //是否跨域 
                 //  https://m.dianping.com/index/api/...
 
             }, 

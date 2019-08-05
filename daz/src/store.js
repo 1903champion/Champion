@@ -23,14 +23,14 @@ const store = new Vuex.Store({
 
         
         Preferential:[],
-        cnxh:[]
+        cnxh:[],
 
-        hotCity: [], //热门城市
-        cityList: [], //城市列表
-        choosed: '', //当前选中的城市
+ 
+  
+
         cityHead: true,
-        Preferential: [],
-        cnxh: [],
+
+
         wzqy: [], //酒店位置区域的数据
         jdsj:[],  //酒店数据
 
@@ -192,9 +192,9 @@ const store = new Vuex.Store({
        
         
 
-        }
+        },
 
-    },
+   
     getters: {}
 })
 export default store

@@ -20,7 +20,7 @@ import store from './store'
 
 
 
-=======
+
 // 引入全局路由
 
 import router from './router';
