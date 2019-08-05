@@ -5,10 +5,10 @@
       <!-- 轮播第一页 -->
       <!-- slides -->
       <swiper-slide class="swiper-slide">
-        <router-link to="/meishi">
-          <div class="iconfont icon-knife-fork"></div>
+        <router-link to="/wedding">
+          <div class="iconfont icon-liren"></div>
           <div>
-            <span>美食</span>
+            <span>婚礼</span>
           </div>
         </router-link>
         <router-link to="/maoyan">
@@ -42,7 +42,7 @@
           </div>
         </router-link>
         <router-link to="/liren">
-          <div class="iconfont icon-liren"></div>
+          <div class="iconfont icon-knife-fork "></div>
           <div>
             <span>丽人</span>
           </div>

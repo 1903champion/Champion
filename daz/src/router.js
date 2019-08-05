@@ -42,7 +42,7 @@ import WeddingLogin from './pages/WeddingLogin.vue';
 
 const router=new VueRouter({
     routes:[
-        // {path:'/',redirect:{name:'wedding'}},
+        {path:'/',redirect:{name:'index'}},
         {path:"/weddinglogin",component:WeddingLogin},
         {path:"/shot",component:Shot},
         {path:"/wedding",component:Wedding},
