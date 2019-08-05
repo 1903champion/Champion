@@ -1,3 +1,4 @@
+
 import VueRouter from 'vue-router';
 
 import china from './components/china'
@@ -19,19 +20,36 @@ import liren from "./components/swiper/liren.vue"
 import gouwu from "./components/swiper/gouwu.vue"
 import zhoubianyou from "./components/swiper/zhoubianyou.vue"
 import ktv from "./components/swiper/ktv.vue"
+
 import searchcity from "./components/searchcity"
 import elongName from "./components/elongName"
 
+import search from "./components/search"
+import date from "./components/swiper/jiudian/date.vue"
+import sousuo from "./components/swiper/jiudian/sousuo.vue"
+import Login from './components/Login.vue';
+import PhoneLogin from './components/PhoneLogin.vue';
+import Region from './components/Region.vue';
 
+
+import jdxxq from './components/swiper/jiudian/jdxqy.vue'
+
+import Wedding from './pages/Wedding.vue';
+import Shot from './pages/Shot.vue';
+import WeddingLogin from './pages/WeddingLogin.vue';
 
 
 
 const router=new VueRouter({
     routes:[
-        {path:'/',redirect:{name:'index'} },
+        // {path:'/',redirect:{name:'wedding'}},
+        {path:"/weddinglogin",component:WeddingLogin},
+        {path:"/shot",component:Shot},
+        {path:"/wedding",component:Wedding},
         {path:"/index",name:"index",component:index},
         {name:'china',path:'/china',component:china},
         {path:'/inter',component:inter},
+
         {path:'/elongAddr',component:elongAddr},
         {path:'/elongName',component:elongName},
 
@@ -40,6 +58,10 @@ const router=new VueRouter({
         {path:'/morecity',component:morecity},
         {path:'/searchcity',component:searchcity},
 
+
+
+        {path:'/addr',component:addr},
+        {path:'/morecity:id',component:morecity},
 
         {path:"/meishi",component:meishi},
         {path:"/maoyan",component:maoyan},
@@ -51,8 +73,24 @@ const router=new VueRouter({
         {path:"/gouwu",component:gouwu},
         {path:"/zhoubianyou",component:zhoubianyou},
         {path:"/ktv",component:ktv},
+        {path:"/search",component:search},
+        {path:"/date",component:date},
+        {path:"/sousuo",component:sousuo},
+        // {path:"/",redirect:{ path: '/login' }},
+        {path:"/login",component:Login},
+        {path:"/phoneLogin",component:PhoneLogin},
+        {path:"/region",component:Region},
+        {path:'/jdxqy',component:jdxxq}
+
+
 
        
 ]
 })
+
+
+
+
+
+
 export default router;

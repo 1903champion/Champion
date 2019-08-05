@@ -1,0 +1,251 @@
+
+.gotop{
+    position: fixed;
+    right:10px;  
+    bottom: 100px;  
+    display: none;
+}
+.topshow{
+    display: block;
+    z-index: 999;
+}
+.gotop img{
+    display: block;
+    width: 1.146667rem /* 43/37.5 */;
+}
+/* title内容 */
+  .head-bg>div{display: flex; align-items: center;}
+  .head-bg>a>img{height: 18px;}
+  .head-bg>div a img{height: 25px;}
+  .head-bg>div a:nth-of-type(1) img{vertical-align: middle;}
+  .head-bg>div a:nth-of-type(2){position: relative;}
+  .head-bg>div a:nth-of-type(2) img{margin-left: 10px;}
+  /* 弹框 */
+  .el-dropdown-menu{
+    background-color: rgba(0, 74, 142, 0.4) !important;
+    border-radius: 5px !important; 
+  }
+   .el-dropdown-menu__item{
+     color: #fff !important;
+   }
+   .popper__arrow::after{
+    border-bottom-color: rgba(0, 74, 142, 0.4) !important;
+   }
+   .el-dropdown-menu__item{
+       line-height: 26px !important;
+   }
+/* 第一个轮播 */
+  .swiper1{
+      position: relative;
+      overflow: hidden;
+      background: #dcc078;
+  }
+  .swiper1>img{
+      position: absolute;
+      left: .266667rem /* 10/37.5 */;
+      top: 50%;
+      margin-top: -0.186667rem /* 7/37.5 */;
+      width: 14px;
+      height: 14px;
+      z-index:99;
+  }
+  .swiper1 .swiper-wrapper{
+      height: 1.12rem /* 42/37.5 */;  
+  }
+  .swiper1 .swiper-slide {
+     height: 1.12rem !important /* 42/37.5 */;
+    font-size: 18px;
+    color: #fff;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+  }
+  /* 第二个轮播*/
+  .swiper2 {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .swiper2 .swiper-button-next{outline: none}
+  .swiper2 .swiper-button-prev{outline: none}
+  .swiper2 .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .swiper2 .swiper-slide-active{
+      z-index: 99;
+  }
+  .swiper2 .swiper-slide img{
+        width:100%
+   }
+   /* 中间内容 */
+.center-ctn{
+    display:flex;
+    flex-wrap: wrap; 
+    padding:0 7px 7px 0;
+}
+.center-ctn>li{
+    box-sizing: border-box;
+    padding: 7px 0 0 7px;
+    width: 25%;
+    min-height:2.4rem /* 90/37.5 */;
+    text-align: center;
+    }
+    .center-ctn>li>a{
+        display: inline-block;
+        width:100%;
+        height: 100%;
+        background: #dcc078;
+        display: flex;
+      flex-direction:column;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+ .center-ctn>li>a img{
+     height: 35px;
+ }
+ .center-ctn>li>a>p:nth-of-type(2){
+     font-size: .266667rem /* 10/37.5 */;
+ }
+ /* 金夫人视频 */
+ .video{
+     overflow: hidden;
+     position: relative;
+ }
+ .video img{
+     width: 100%;
+     position: absolute;
+     top: 0;
+
+ }
+ .video video{
+     width: 100%;
+ }
+
+  /* 图片样例 */
+  .yangli>img{
+      width: 100%
+  }
+    .photo { 
+        box-sizing: border-box;
+        padding: 0 10px;
+        -moz-column-count:2; /* Firefox */
+        -webkit-column-count:2; /* Safari 和 Chrome */
+        column-count:2;
+        -moz-column-gap: 2em;
+        -webkit-column-gap: 2em;
+        column-gap: 10px;
+        width: 100%;
+        margin:7px auto;
+    }
+    .photo .item { 
+        margin-bottom: 7px;
+        /* -moz-page-break-inside: avoid; */
+        -webkit-column-break-inside: avoid;
+        break-inside: avoid;
+        color: #bcbcbc;
+    }
+    .photo .item img{
+        width: 100%;
+    }
+    .photo .item h5{
+        font-size: .533333rem /* 20/37.5 */;
+        color: #484848;
+        margin: 7px 0;
+    }
+    .photo .item p{
+        font-size: .426667rem /* 16/37.5 */;
+        margin-bottom: .133333rem /* 5/37.5 */;
+    }
+    /* 表单 */
+    .userinfo{
+        padding: 0 20px;
+    }
+    .userinfo input{
+        width: 100%;
+        display: block;
+        outline: none;
+        padding: .266667rem /* 10/37.5 */;
+        margin: .266667rem /* 10/37.5 */ 0;
+        box-sizing: border-box;
+        font-size: .426667rem /* 16/37.5 */;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: #f6f6f6;
+        box-shadow: 0 2px 4px #ccc inset
+        
+    }
+    .userinfo input:nth-of-type(3){
+        background: #e73f05;
+        color: #fff;
+        font-weight: 900;
+    }
+    
+    .el-message {
+        top:50% !important;
+        text-align: center;
+      }
+ 
+    /* 地图高 */
+  .amap-page-container {
+      width: 100%;
+    height: 200px;
+    margin: 20px 0;
+  }
+  /* 联系我们 */
+  .footer{
+    padding:0 10px;
+    background-color: #ebe6d9;
+  }
+  .footer h3{
+      font-size: .8rem /* 30/37.5 */;
+        color: #5a5a5a;
+        font-family: "LincolnMillerBannerBeta";
+  }
+  .footer>p{font-size: .48rem /* 18/37.5 */}
+  .footer ul{
+      overflow: hidden;
+      padding:0 
+  }
+  .footer ul li{
+      float:left;
+      padding: 10px 0 0 10px;
+      width: 50%;
+      box-sizing: border-box;
+  }
+  .footer ul li h5{
+    color: #666;
+    margin: 7px 0;
+    font-size: .426667rem /* 16/37.5 */;
+  }
+ 
+    .footer>div{
+        padding: .533333rem /* 20/37.5 */ 0;
+        text-align: center;
+        color: #8f8f8f;
+        line-height: .533333rem /* 20/37.5 */
+    }
