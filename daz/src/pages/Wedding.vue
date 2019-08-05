@@ -9,7 +9,7 @@
     <!-- 顶部广告 -->
     <div class="swiper-container swiper1">
         <div class="swiper-wrapper">
-            <div class="swiper-slide swiper-no-swiping">SlideSlideSlideSlideSlide 1</div>
+            <div class="swiper-slide swiper-no-swiping">Slide1SlideSlideSlideSlide 1</div>
             <div class="swiper-slide swiper-no-swiping" >Slide 2SlideSlideSlide</div>
             <div class="swiper-slide swiper-no-swiping ">Slide 3SlideSlideSlideSlide</div>
         </div>
