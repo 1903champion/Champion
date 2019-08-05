@@ -8,6 +8,10 @@
 <script>
 // 引入手机淘宝js
 import "./assets/js/flexble"
+// 引入jQuery
+
+import "./assets/js/jquery"
+
 export default {
   name: 'app',
   components: {
@@ -16,7 +20,7 @@ export default {
 </script>
 
 <style>
-@import url("http://at.alicdn.com/t/font_1324710_w0j2yjrkrlk.css");
+@import url("http://at.alicdn.com/t/font_1324710_ypszmqkp7r.css");
 *{
   margin  :0;
   padding:0;

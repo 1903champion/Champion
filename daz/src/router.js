@@ -25,9 +25,13 @@ import sousuo from "./components/swiper/jiudian/sousuo.vue"
 import Login from './components/Login.vue';
 import PhoneLogin from './components/PhoneLogin.vue';
 import Region from './components/Region.vue';
+
+import jdxxq from './components/swiper/jiudian/jdxqy.vue'
+
 import Wedding from './pages/Wedding.vue';
 import Shot from './pages/Shot.vue';
 import WeddingLogin from './pages/WeddingLogin.vue';
+
 
 
 const router=new VueRouter({
@@ -58,7 +62,8 @@ const router=new VueRouter({
         {path:"/login",component:Login},
         {path:"/phoneLogin",component:PhoneLogin},
         {path:"/region",component:Region},
-       
+        {path:'/jdxqy',component:jdxxq}
+
 
 
        
