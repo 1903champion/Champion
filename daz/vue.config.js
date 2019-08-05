@@ -4,12 +4,16 @@ module.exports = {
         proxy:{          
             
             // 解决跨域问题
+            // '/':{
+            //     target:"https://m.dianping.com/",
+            //     changeOrigin:true,
+            //     ws:false,    
+            // }, 
             '/':{
-                target:"https://m.dianping.com/",
+                target:"http://m.elong.com/",
                 changeOrigin:true,
                 ws:false,    
             }, 
-            
            
             
           

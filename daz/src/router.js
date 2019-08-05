@@ -6,6 +6,7 @@ import inter from './components/inter'
 
 import addr from './papgs/addr'
 import morecity from './papgs/morecity'
+import elongAddr from './components/elongAddr'
 
 import meishi from "./components/swiper/meishi"
 import index from "./papgs/index.vue"
@@ -19,6 +20,7 @@ import gouwu from "./components/swiper/gouwu.vue"
 import zhoubianyou from "./components/swiper/zhoubianyou.vue"
 import ktv from "./components/swiper/ktv.vue"
 import searchcity from "./components/searchcity"
+import elongName from "./components/elongName"
 
 
 
@@ -30,6 +32,8 @@ const router=new VueRouter({
         {path:"/index",name:"index",component:index},
         {name:'china',path:'/china',component:china},
         {path:'/inter',component:inter},
+        {path:'/elongAddr',component:elongAddr},
+        {path:'/elongName',component:elongName},
 
        
         {path:'/addr',component:addr},

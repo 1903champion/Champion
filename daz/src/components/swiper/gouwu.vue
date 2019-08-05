@@ -64,19 +64,22 @@
         <div class='items'>
             <h3>购物头条</h3>
             <ul class='itemlist'>
-                <li v-for='it in items' :key='it.id'>
-                    <img src="it.picture.url">
-                   <h3> {{it.title}}</h3>
-                    <p>
-                        <img src='it.authorAvatar' />
-                        <span>{{authorName}}</span>                      
-                    </p>
-                    <div>
-                        <img src="../../assets/img/hot.png" >
-                        <span>
-                            {{it.hot}}
-                        </span>
+                <li v-for='it in items' :key='it.data.id'>
+                    <img :src="it.data.picture.url">
+                    <div class='wordBox'>
+                         <h3> {{it.data.title}}</h3>
+                        <p>
+                            <img :src='it.data.authorAvatar' />
+                            <span>{{it.data.authorName}}</span>                      
+                        </p>
+                        <div class='rightNumber'>
+                            <img src="../../assets/img/hot.png" >
+                            <span>
+                                {{it.data.hot}}
+                            </span>
+                        </div>
                     </div>
+                  
                 </li>
             </ul>
         </div>
@@ -100,8 +103,8 @@ export default {
   },mounted(){
       axios.get('https://easy-mock.com/mock/5d42dbad17e02d075090e88e/shop')
       .then(res=>{
-          console.log(res)
-        //   this.items=res.data.msg.items
+          this.items=res.data.msg.items
+          console.log(this.items)
       })
   }
 }
@@ -238,4 +241,61 @@ a{
     line-height:1.28rem /* 48/37.5 */;
     /* float:left; */
 } 
+.items{
+    background:#fff;
+}
+.items h3{
+    font-size:.426667rem /* 16/37.5 */;
+    color:#555;
+    padding:.293333rem /* 11/37.5 */ .4rem /* 15/37.5 */;
+    font-weight:100;
+}
+.itemlist{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.itemlist li{
+    width:48%;
+    
+}
+.itemlist li>img{
+    width:4.92rem /* 184.5/37.5 */;
+}
+.itemlist li>.wordBox{
+    padding:.24rem /* 9/37.5 */ .32rem /* 12/37.5 */;
+    width:4.266667rem /* 160/37.5 */;
+    height:1.706667rem /* 64/37.5 */;
+    position:relative;
+}
+.itemlist li>.wordBox h3{
+    line-height: .533333rem /* 20/37.5 */;
+    font-weight: 700;
+    font-size: .373333rem /* 14/37.5 */;
+    color: #111;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.itemlist li .wordBox p img{
+    width:.48rem /* 18/37.5 */;
+    height:.48rem /* 18/37.5 */;
+    margin-right:.16rem /* 6/37.5 */;
+    vertical-align: middle;
+}
+.rightNumber{
+    position:absolute;
+    right:.533333rem /* 20/37.5 */;
+    bottom:.533333rem /* 20/37.5 */;
+}
+.rightNumber img{
+    height:.346667rem /* 13/37.5 */;
+    width:.346667rem /* 13/37.5 */;
+    vertical-align: middle;
+}
+.rightNumber span{
+    font-size:.32rem /* 12/37.5 */;
+    color:#999;
+    vertical-align: middle;
+}
 </style>

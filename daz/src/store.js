@@ -15,8 +15,12 @@ const store = new Vuex.Store({
         intercityList:[],//国际热门城市
 
         choosed:'',//当前选中的城市
-       
+        elongChoosed:'',//艺龙当前选中的城市
+        elongInputArr:[],//艺龙input框有值后的数据
+        elongNameChoosed:'',//艺龙被选中的酒店名
+        elongNameInputArr:[],//艺龙酒店input框有值后的数据
 
+        
         Preferential:[],
         cnxh:[]
 
@@ -56,7 +60,22 @@ const store = new Vuex.Store({
         // 城市输入框获取值
         getDataInput(state,res){
             state.cityInpArr=res
-        }
+        },
+        //艺龙点击热门城市和城市列表事件
+        elongChooseCity(state,v){
+            state.elongChoosed=v
+            router.push('zhoubianyou')
+        },
+        elongInptGet(state,res){
+            state.elongInputArr=res
+        },
+        elongNameInptGet(state,res){
+        state.elongNameInputArr=res
+        },
+        elongChooseName(state,v){
+            state.elongNameChoosed=v
+            router.push('zhoubianyou')
+        },
         
     },
     actions:{
@@ -86,17 +105,20 @@ const store = new Vuex.Store({
                 store.commit("getInterCity",res.data.appState)
             })
         },
-
-        // getDataInputcity(store,url){
-        //     console.log(url)
-            
-        //     axios.post(url,e)
-        //     .then(res=>{
-        //         console.log('input:',res)
-
-        //         store.commit("getDataInput",res)
-        //     })
-        // },
+        elongInputGetcity(store,v){           
+            axios.get('/hotel/api/gethotelsugcitys?orientation=0&_rt=1564832703590&searchkey='+v)
+                .then(res=>{               
+                    store.commit("elongInptGet",res.data)
+            })
+        },
+        elongNameInputGetcity(store,v){           
+            axios.get('/hotel/api/gethotelsugkeywords?r=0.11709248761281854&_rt=1564895192554&word='+v)
+                .then(res=>{
+                    console.log(res)               
+                    store.commit("elongNameInptGet",res.data)
+            })
+        },
+       
         
     },
     getters:{}
